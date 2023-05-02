@@ -1,183 +1,144 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="try.css"> 
-    <title>SIDETECT</title>
+{% extends 'index.html' %}
 
-</head>
-<body>
-  <nav class="navbar navbar-expand-lg navbar-dark py-3 fixed-top bg-dark">
+{% block head %}
+<title>SIDetect WebApp</title>
+{% endblock %}
+
+{% block content %}
+
+<div class="banner"></div>
+
+
+<section class="p-5 mb-5 ms-5">
+  <div class="container ">
+    <h1 class="text-center">CONTACT - HELP IS AVAILABLE</h1>
+    <h5 class="text-center mb-5">
+  SPEAK WITH SOMEONE <br> TODAY!
+    </h5>
     <div class="container">
-          <a class="navbar-brand" href="homepage.html"><span class="text-warning">SID</span>ETECT</a>
-          <a href="detectiton.html"class="navbar-brand"><span class="bi bi-incognito"></span></a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navmenu"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navmenu">
-        <ul class="navbar-nav ms-auto">
-          
-          <li class="nav-item">
-            <a href="homepage.html" class="nav-link text-light">HOME</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link text-light">SERVICE</a>
-          </li>
-          <li class="nav-item">
-            <a href="team.html" class="nav-link text-light">TEAM</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <div class="banner"></div>
-
-
-    <section class="p-5 mb-5 ms-5">
-      <div class="container ">
-        <h1 class="text-center">CONTACT - HELP IS AVAILABLE</h1>
-        <h5 class="text-center mb-5">
-      SPEAK WITH SOMEONE <br> TODAY!
-        </h5>
-        <div class="container">
-          <div class="row row-cols-1 row-cols-md-2 g-4">
-            <div class="col">
-              <div class="card" >
-                <div class="card-body">
-                  <h5 class="card-title">HopeLine PH<i class="bi bi-shield-check float-end" style="color:green"></i></h5>
-                  <h6 class="card-subtitle mb-2 text-body-secondary">Everyone</h6>
-                  <p class="card-text">HOPELINE provides 24/7, free, compassionate and confidential support by phone and online chat. We are here to help everyone in...</p>
-                  <div class="ms-4">
-                    <i class="bi bi-clock" style="color: blue;"> Open 24/7</i></div> 
-                   
-                  <div class="ms-4 mt-1">
-                    <i class="bi bi-person-check"> Counselors</i> </div>
-                  <div class="ms-4 mt-1">
-                    <i class="bi bi-telephone"> (02)8804-4673</i>
-                  </div>                
-                  <div class="ms-4 mt-1">
-                    <i class="bi bi-globe"> <a href="https://www.ngf-mindstrong.org" style="text-decoration: none;">ngf-mindstrong.org</a></i>     
-                  </div>                
-                  <hr>
-                  <div class="text-center p-1">   <a style="padding: 1rem; border-radius: 50%; background-color: whitesmoke;"
-                    class="bi bi-telephone-fill text-dark me-4" href="tel:(02) 8804-4673"></a></a>
-                    <a style="padding: 1rem; border-radius: 50%; background-color: whitesmoke;"
-                class="bi bi-chat-left-dots-fill text-dark" href="https://www.facebook.com/HopelinePH/"></a></a></div>
-                </div>
-              </div>
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col">
+          <div class="card" >
+            <div class="card-body">
+              <h5 class="card-title">HopeLine PH<i class="bi bi-shield-check float-end" style="color:green"></i></h5>
+              <h6 class="card-subtitle mb-2 text-body-secondary">Everyone</h6>
+              <p class="card-text">HOPELINE provides 24/7, free, compassionate and confidential support by phone and online chat. We are here to help everyone in...</p>
+              <div class="ms-4">
+                <i class="bi bi-clock" style="color: blue;"> Open 24/7</i></div> 
+               
+              <div class="ms-4 mt-1">
+                <i class="bi bi-person-check"> Counselors</i> </div>
+              <div class="ms-4 mt-1">
+                <i class="bi bi-telephone"> (02)8804-4673</i>
+              </div>                
+              <div class="ms-4 mt-1">
+                <i class="bi bi-globe"> <a href="https://www.ngf-mindstrong.org" style="text-decoration: none;">ngf-mindstrong.org</a></i>     
+              </div>                
+              <hr>
+              <div class="text-center p-1">   <a style="padding: 1rem; border-radius: 50%; background-color: whitesmoke;"
+                class="bi bi-telephone-fill text-dark me-4" href="tel:(02) 8804-4673"></a></a>
+                <a style="padding: 1rem; border-radius: 50%; background-color: whitesmoke;"
+            class="bi bi-chat-left-dots-fill text-dark" href="https://www.facebook.com/HopelinePH/"></a></a></div>
             </div>
-        
-            <div class="col">
-              <div class="card" >
-                <div class="card-body">
-                  <h5 class="card-title">In Touch: Crisis Line<i class="bi bi-shield-check float-end" style="color:green"></i></h5>
-                  <h6 class="card-subtitle mb-2 text-body-secondary">Everyone</h6>
-                  <p class="card-text">HOPELINE provides 24/7, free, compassionate and confidential support by phone and online chat. We are here to help everyone in...</p>
-                  <div class="ms-4">
-                    <i class="bi bi-clock" style="color: blue;"> Open 24/7</i></div> 
-                   
-                  <div class="ms-4 mt-1">
-                    <i class="bi bi-person-check"> Counselors</i> </div>
-                  <div class="ms-4 mt-1">
-                    <i class="bi bi-telephone"> (02)8893-7603</i>
-                  </div>                
-                  <div class="ms-4 mt-1">
-                    <i class="bi bi-globe"> <a href="https://www.in-touch.org" style="text-decoration: none;">in-touch.org</a></i>     
-                  </div>                
-                  <hr>
-                  <div class="text-center p-1">   <a style="padding: 1rem; border-radius: 50%; background-color: whitesmoke;"
-                    class="bi bi-telephone-fill text-dark me-4" href="tel:(02) 8804-4673"></a></a>
-                    <a style="padding: 1rem; border-radius: 50%; background-color: whitesmoke;"
-                class="bi bi-chat-left-dots-fill text-dark" href="https://www.facebook.com/HopelinePH/"></a></a></div>
-          
-                </div>
-              </div>
-            </div>
-        
-            <div class="col">
-              <div class="card" >
-                <div class="card-body">
-                  <h5 class="card-title">NCMH Crisis Hotline<i class="bi bi-shield-check float-end" style="color:green"></i></h5>
-                  <h6 class="card-subtitle mb-2 text-body-secondary">Everyone</h6>
-                  <p class="card-text">HOPELINE provides 24/7, free, compassionate and confidential support by phone and online chat. We are here to help everyone in...</p>
-                  <div class="ms-4">
-                    <i class="bi bi-clock" style="color: blue;"> Open 24/7</i></div> 
-                   
-                  <div class="ms-4 mt-1">
-                    <i class="bi bi-person-check"> Counselors</i> </div>
-                  <div class="ms-4 mt-1">
-                    <i class="bi bi-telephone"> 1800-1888-1553</i>
-                  </div>                
-                  <div class="ms-4 mt-1">
-                    <i class="bi bi-globe"> <a href="https://www.nmchusaptayo.com" style="text-decoration: none;">nmchusaptayo.com</a></i>     
-                  </div>                
-                  <hr>
-                  <div class="text-center p-1">   <a style="padding: 1rem; border-radius: 50%; background-color: whitesmoke;"
-                    class="bi bi-telephone-fill text-dark me-4" href="tel:(02) 8804-4673"></a></a>
-                    <a style="padding: 1rem; border-radius: 50%; background-color: whitesmoke;"
-                class="bi bi-chat-left-dots-fill text-dark" href="https://www.facebook.com/HopelinePH/"></a></a></div>
-                </div>
-              </div>
-            </div>
-        
-            <div class="col">
-              <div class="card" >
-                <div class="card-body">
-                  <h5 class="card-title">Child Helpline<i class="bi bi-shield-check float-end" style="color:green"></i></h5>
-                  <h6 class="card-subtitle mb-2 text-body-secondary">Everyone</h6>
-                  <p class="card-text">HOPELINE provides 24/7, free, compassionate and confidential support by phone and online chat. We are here to help everyone in...</p>
-                  <div class="ms-4">
-                    <i class="bi bi-clock" style="color: blue;"> Open 24/7</i></div> 
-                   
-                  <div class="ms-4 mt-1">
-                    <i class="bi bi-person-check"> Counselors</i> </div>
-                  <div class="ms-4 mt-1">
-                    <i class="bi bi-telephone"> 163</i>
-                  </div>                
-                  <div class="ms-4 mt-1">
-                    <i class="bi bi-globe"> <a 
-                      href="https://www.foundation.abs-cbn.com" style="text-decoration: none;">foundation.abs-cbn.com</a></i>     
-                  </div>                
-                  <hr>
-                  <div class="text-center p-1">   <a style="padding: 1rem; border-radius: 50%; background-color: whitesmoke;"
-                    class="bi bi-telephone-fill text-dark me-4" href="tel:(02) 8804-4673"></a></a>
-                    <a style="padding: 1rem; border-radius: 50%; background-color: whitesmoke;"
-                class="bi bi-chat-left-dots-fill text-dark" href="https://www.facebook.com/HopelinePH/"></a></a></div>
-                </div>
-              </div>
-            </div>
-        
-          
           </div>
+        </div>
+    
+        <div class="col">
+          <div class="card" >
+            <div class="card-body">
+              <h5 class="card-title">In Touch: Crisis Line<i class="bi bi-shield-check float-end" style="color:green"></i></h5>
+              <h6 class="card-subtitle mb-2 text-body-secondary">Everyone</h6>
+              <p class="card-text">HOPELINE provides 24/7, free, compassionate and confidential support by phone and online chat. We are here to help everyone in...</p>
+              <div class="ms-4">
+                <i class="bi bi-clock" style="color: blue;"> Open 24/7</i></div> 
+               
+              <div class="ms-4 mt-1">
+                <i class="bi bi-person-check"> Counselors</i> </div>
+              <div class="ms-4 mt-1">
+                <i class="bi bi-telephone"> (02)8893-7603</i>
+              </div>                
+              <div class="ms-4 mt-1">
+                <i class="bi bi-globe"> <a href="https://www.in-touch.org" style="text-decoration: none;">in-touch.org</a></i>     
+              </div>                
+              <hr>
+              <div class="text-center p-1">   <a style="padding: 1rem; border-radius: 50%; background-color: whitesmoke;"
+                class="bi bi-telephone-fill text-dark me-4" href="tel:(02) 8804-4673"></a></a>
+                <a style="padding: 1rem; border-radius: 50%; background-color: whitesmoke;"
+            class="bi bi-chat-left-dots-fill text-dark" href="https://www.facebook.com/HopelinePH/"></a></a></div>
+      
+            </div>
           </div>
-     
+        </div>
+    
+        <div class="col">
+          <div class="card" >
+            <div class="card-body">
+              <h5 class="card-title">NCMH Crisis Hotline<i class="bi bi-shield-check float-end" style="color:green"></i></h5>
+              <h6 class="card-subtitle mb-2 text-body-secondary">Everyone</h6>
+              <p class="card-text">HOPELINE provides 24/7, free, compassionate and confidential support by phone and online chat. We are here to help everyone in...</p>
+              <div class="ms-4">
+                <i class="bi bi-clock" style="color: blue;"> Open 24/7</i></div> 
+               
+              <div class="ms-4 mt-1">
+                <i class="bi bi-person-check"> Counselors</i> </div>
+              <div class="ms-4 mt-1">
+                <i class="bi bi-telephone"> 1800-1888-1553</i>
+              </div>                
+              <div class="ms-4 mt-1">
+                <i class="bi bi-globe"> <a href="https://www.nmchusaptayo.com" style="text-decoration: none;">nmchusaptayo.com</a></i>     
+              </div>                
+              <hr>
+              <div class="text-center p-1">   <a style="padding: 1rem; border-radius: 50%; background-color: whitesmoke;"
+                class="bi bi-telephone-fill text-dark me-4" href="tel:(02) 8804-4673"></a></a>
+                <a style="padding: 1rem; border-radius: 50%; background-color: whitesmoke;"
+            class="bi bi-chat-left-dots-fill text-dark" href="https://www.facebook.com/HopelinePH/"></a></a></div>
+            </div>
+          </div>
+        </div>
+    
+        <div class="col">
+          <div class="card" >
+            <div class="card-body">
+              <h5 class="card-title">Child Helpline<i class="bi bi-shield-check float-end" style="color:green"></i></h5>
+              <h6 class="card-subtitle mb-2 text-body-secondary">Everyone</h6>
+              <p class="card-text">HOPELINE provides 24/7, free, compassionate and confidential support by phone and online chat. We are here to help everyone in...</p>
+              <div class="ms-4">
+                <i class="bi bi-clock" style="color: blue;"> Open 24/7</i></div> 
+               
+              <div class="ms-4 mt-1">
+                <i class="bi bi-person-check"> Counselors</i> </div>
+              <div class="ms-4 mt-1">
+                <i class="bi bi-telephone"> 163</i>
+              </div>                
+              <div class="ms-4 mt-1">
+                <i class="bi bi-globe"> <a 
+                  href="https://www.foundation.abs-cbn.com" style="text-decoration: none;">foundation.abs-cbn.com</a></i>     
+              </div>                
+              <hr>
+              <div class="text-center p-1">   <a style="padding: 1rem; border-radius: 50%; background-color: whitesmoke;"
+                class="bi bi-telephone-fill text-dark me-4" href="tel:(02) 8804-4673"></a></a>
+                <a style="padding: 1rem; border-radius: 50%; background-color: whitesmoke;"
+            class="bi bi-chat-left-dots-fill text-dark" href="https://www.facebook.com/HopelinePH/"></a></a></div>
+            </div>
+          </div>
+        </div>
+    
+      
       </div>
-  </section>
-  <style>
-    .banner {
-  width: 100%;
-  height: 100vh;
-  background: url('../static/img/bg1.png') #faf2e9;
-  background-size:cover;
-  background-attachment:fixed;   
-  background-size: 50%;
-  background-position: center;
-  background-repeat: no-repeat;
+      </div>
+ 
+  </div>
+</section>
+<style>
+.banner {
+width: 100%;
+height: 100vh;
+background: url('../static/img/bg1.png') #faf2e9;
+background-size:cover;
+background-attachment:fixed;   
+background-size: 50%;
+background-position: center;
+background-repeat: no-repeat;
 }
-
-
-  </style>
-</body>
-</html>
+</style>
+{% endblock %}
