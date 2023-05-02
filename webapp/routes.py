@@ -13,6 +13,9 @@ def home():
 def detection_page():
     return render_template("detection.html")
 
+@app.route("/hotlines")
+def hotline_page():
+    return render_template("hotline.html")
 
 @app.route("/team")
 def team_page():
