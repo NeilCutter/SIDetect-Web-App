@@ -121,7 +121,7 @@
 
         </div>
         <div class="col-md">
-          <img src="../static/img/pic6.avif" data-aos="slide-left" class="img-fluid" alt="" />
+          <img src="../static/img/pic6.jpg" data-aos="slide-left" class="img-fluid" alt="" />
         </div>
       </div>
     </div>
@@ -237,26 +237,29 @@
           <h3>Contacts</h3>
           <p> Ayala Blvd, Ermita, Manila, 1000 Metro Manila</p>
           <p>Phone Number: 09320203902</p>
-          <p>Tel Number: 28348348</p>
+          <p>Telephone Number: 28348348</p>
+        </div>
+
+        <div class="menu mt-3">
+          <h3>SIDetect Features</h3>
+          <ul>
+            <li><a href="{{ url_for('detection_page') }}">Detection</a></li>
+            <li><a href="{{ url_for('chatbot_page') }}">Chatbot</a></li>
+            
+          </ul>
+          
         </div>
 
         <div class="menu mt-3">
           <h3>Quick Links</h3>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Service</a></li>
-            <li><a href="#">Team</a></li>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('hotline_page') }}">Hotlines</a></li>
+            <li><a href="{{ url_for('team_page') }}">Developers</a></li>
             
           </ul>
         </div>
 
-        <div class="news-letter mt-3">
-          <h3>SIDetect</h3>
-          <form action="" class="d-flex" role="text">
-            <input type="email" class="form-control" placeholder="Email">
-            <button class="btn btn-warning"> SIGN-UP</button>
-          </form>
-        </div>
       </div>
     </div>
   </footer>
