@@ -12,9 +12,7 @@
         <div>
           <h1 class=" text-black"><span class="text-warning">SIDetect</span> : A Web-based Application </span></h1>
           <p class="lead my-4 text-black">
-            For Detecting Suicidal Ideations (SI) using Natural Language Processing and Machine Learning
-
-
+            For Detecting Suicidal Ideations (SI) using Natural Language Processing and Machine Learning.
           </p>
 
         </div>
@@ -27,17 +25,17 @@
     <div class="container">
       <div class="row text-center g-4 my-5">
         <div class="col-md" data-aos="fade-up">
-          <div class="card bg-secondary text-light">
+          <div class="card bg-dark text-light">
             <div class="card-body text-center">
               <div class="h1 mb-3">
                 <i class="bi bi-search"></i>
               </div>
-              <h3 class="card-title mb-3">SIDetection</h3>
-              <p class="card-text">
+              <h3 class="card-title mb-3">SIDetect</h3>
+              <p class="card-text" style="text-align: justify;">
                 Suicide is a critical issue in modern society. Early detection and prevention of suicide attempts should
                 be addressed to save people's life.
               </p>
-              <a href="{{ url_for('detection_page')}}" class="btn btn-dark">Start Detect</a>
+              <a href="{{ url_for('detection_page')}}" class="btn btn-warning">Start Detect</a>
             </div>
           </div>
         </div>
@@ -47,12 +45,12 @@
               <div class="h1 mb-3">
                 <i class="bi bi-laptop"></i>
               </div>
-              <h3 class="card-title mb-3">Chatbot</h3>
-              <p class="card-text">
-                A chatbot you can ask related question to mental health, suicides, depression and anxiety.
+              <h3 class="card-title mb-3">MIKAY the Chatbot</h3>
+              <p class="card-text" style="text-align: justify;">
+                A chatbot named "MIKAY" whom you can ask related question to mental health, suicides, depression and anxiety.
               </p>
-              <br>
-              <a href="{{ url_for('chatbot_page')}}" class="btn btn-primary">Ask now</a>
+              
+              <a href="{{ url_for('chatbot_page')}}" class="btn btn-warning">Ask now</a>
             </div>
           </div>
         </div>
@@ -62,12 +60,12 @@
               <div class="h1 mb-3">
                 <i class="bi bi-people"></i>
               </div>
-              <h3 class="card-title mb-3">Our Team</h3>
-              <p class="card-text">
-                A Students taking Bachelor of Science in Computer Science from Technological Universiy of the
-                Philippines
+              <h3 class="card-title mb-3">Our Team </h3>
+              <p class="card-text" style="text-align: justify;">
+                We are students taking Bachelor of Science in Computer Science from Technological Universiy of the
+                Philippines.
               </p>
-              <a href="{{ url_for('team_page') }}" class="btn btn-primary">Read More</a>
+              <a href="{{ url_for('team_page') }}" class="btn btn-warning">Read More</a>
             </div>
           </div>
         </div>
@@ -121,7 +119,7 @@
 
         </div>
         <div class="col-md">
-          <img src="../static/img/pic6.avif" data-aos="slide-left" class="img-fluid" alt="" />
+          <img src="../static/img/pic6.jpg" data-aos="slide-left" class="img-fluid" alt="" />
         </div>
       </div>
     </div>
@@ -237,26 +235,29 @@
           <h3>Contacts</h3>
           <p> Ayala Blvd, Ermita, Manila, 1000 Metro Manila</p>
           <p>Phone Number: 09320203902</p>
-          <p>Tel Number: 28348348</p>
+          <p>Telephone Number: 28348348</p>
+        </div>
+
+        <div class="menu mt-3">
+          <h3>SIDetect Features</h3>
+          <ul>
+            <li><a href="{{ url_for('detection_page') }}">Detection</a></li>
+            <li><a href="{{ url_for('chatbot_page') }}">Chatbot</a></li>
+            
+          </ul>
+          
         </div>
 
         <div class="menu mt-3">
           <h3>Quick Links</h3>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Catalogue</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('hotline_page') }}">Hotlines</a></li>
+            <li><a href="{{ url_for('team_page') }}">Developers</a></li>
+            
           </ul>
         </div>
 
-        <div class="news-letter mt-3">
-          <h3>Newsletter</h3>
-          <form action="" class="d-flex" role="text">
-            <input type="email" class="form-control" placeholder="Email">
-            <button class="btn btn-danger">SIGN-UP</button>
-          </form>
-        </div>
       </div>
     </div>
   </footer>
