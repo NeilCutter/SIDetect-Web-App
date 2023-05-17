@@ -1,9 +1,6 @@
 import openai
 import os
 
-#uncomment this for localhost
-#openai.api_key = "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"
-
 #For deployment
 openai.api_key = os.environ.get('KEY')
 
