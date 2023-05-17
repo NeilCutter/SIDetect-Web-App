@@ -1,6 +1,6 @@
 import openai
 
-openai.api_key = "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"
+openai.api_key = "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"
 
 
 def text_process(prompt, engine="text-davinci-003", temperature=0.6, max_tokens=2000, top_p=1.0, frequency_penalty=0.0, presence_penalty=0.0):
