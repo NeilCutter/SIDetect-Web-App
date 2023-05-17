@@ -2,7 +2,7 @@ import spacy
 import re
 import nltk
 from nltk.stem import WordNetLemmatizer
-nltk.download('wordnet')
+
 
 sp = spacy.load('en_core_web_sm')
 all_stopwords = sp.Defaults.stop_words
