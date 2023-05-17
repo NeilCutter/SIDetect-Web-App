@@ -1,6 +1,9 @@
 import spacy
 import re
+import nltk
+nltk.download('wordnet')
 from nltk.stem import WordNetLemmatizer
+
 
 sp = spacy.load('en_core_web_sm')
 all_stopwords = sp.Defaults.stop_words
@@ -21,3 +24,4 @@ def clean_text(text, stopwords=all_stopwords):
     text = [word for word in text if word not in stopwords]
     text = ' '.join(text)
     return text
+
