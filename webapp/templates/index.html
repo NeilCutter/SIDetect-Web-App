@@ -30,14 +30,14 @@
        
         <ul class="navbar-nav ms-auto">
 
-          <li class="nav-item">
-            <a href="{{ url_for('home') }}" class="nav-link text-light">HOME</a>
+          <li class="nav-item mt-1">
+            <a href="{{ url_for('home') }}" class="navbar-brand p-1">HOME</a>
           </li>
-          <li class="nav-item">
-            <a href="{{ url_for('hotline_page') }}" class="nav-link text-light">HOTLINES</a>
+          <li class="nav-item mt-1">
+            <a href="{{ url_for('hotline_page') }}" class="navbar-brand p-1">HOTLINES</a>
           </li>
-          <a class="navbar-brand" href="{{ url_for('detection_page') }}" ><span class="bi bi-incognito float-start">Detection</span></a>    
-          <a class="navbar-brand" href="{{ url_for('chatbot_page') }}" ><span class="bi bi-robot float-start">Chatbot</span></a>
+          <a class="navbar-brand p-1" href="{{ url_for('detection_page') }}" ><span class="bi bi-incognito float-start">DETECTION</span></a>    
+          <a class="navbar-brand p-1" href="{{ url_for('chatbot_page') }}" ><span class="bi bi-robot float-start">CHATBOT</span></a>
         </ul>
       </div>
     </div>
