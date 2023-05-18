@@ -2,11 +2,13 @@
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
+	
 }
 .detection {
 	width: 100%;
 	height: 100vh;
 	background-color: #232931;
+	overflow-x: hidden;	
 }
 
 .input-group {
@@ -62,7 +64,6 @@ select:hover {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-left: 10px;
 }
 .title {
 	text-align: center;
@@ -127,5 +128,11 @@ select:hover {
 	}
 	100% {
 		fill: #393e46;
+	}
+}
+@media (max-width: 427px){
+	h1{
+		text-align: left;
+
 	}
 }
