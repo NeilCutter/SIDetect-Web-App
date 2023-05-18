@@ -259,12 +259,35 @@ body::before {
 	width: 100%;
 	text-align: center;
 }
-  
-  @media (min-width: 768px) {
+@media (max-width: 1399px){
+    #card_col{
+       width: 100%;
+       height: 100%; 
+    }
+}
+@media (max-width: 1199px){
+    #card_col .card{
+      width: 100%;
+     height: 100%; 
+    }
+   
+}
+@media (max-width: 999px){
+    #card_col .card{
+        display: grid;
+        grid: auto auto auto;
+        grid-gap: 10px;
+    }
+}
+  @media (max-width: 768px) {
     .news-input {
       width: 50%;
     }
+    .home-title{
+        margin-top: 50px;
+    }
   }
+
   @keyframes floatup {
     from {
         transform: translateY(14px);

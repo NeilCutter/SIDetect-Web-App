@@ -11,6 +11,7 @@
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="..\static\css\styles.css">
+  <link rel="icon" type="image/x-icon" href="../static/img/incognito-icon.png">
   <link rel="stylesheet" href="..\static\css\footer.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -19,23 +20,25 @@
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark py-3 fixed-top bg-dark">
+    
     <div class="container">
       <a class="navbar-brand" href="{{ url_for('home') }}"><span class="text-warning">SID</span>ETECT</a>
-      <a class="navbar-brand" href="{{ url_for('detection_page') }}" ><span class="bi bi-incognito">Detection</span></a>
-      <a class="navbar-brand" href="{{ url_for('chatbot_page') }}" ><span class="bi bi-robot">Chatbot</span></a>
+      
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navmenu">
+       
         <ul class="navbar-nav ms-auto">
 
-          <li class="nav-item">
-            <a href="{{ url_for('home') }}" class="nav-link text-light">HOME</a>
+          <li class="nav-item mt-1">
+            <a href="{{ url_for('home') }}" class="navbar-brand p-1">HOME</a>
           </li>
-          <li class="nav-item">
-            <a href="{{ url_for('hotline_page') }}" class="nav-link text-light">HOTLINES</a>
+          <li class="nav-item mt-1">
+            <a href="{{ url_for('hotline_page') }}" class="navbar-brand p-1">HOTLINES</a>
           </li>
-  
+          <a class="navbar-brand p-1" href="{{ url_for('detection_page') }}" ><span class="bi bi-incognito float-start">DETECTION</span></a>    
+          <a class="navbar-brand p-1" href="{{ url_for('chatbot_page') }}" ><span class="bi bi-robot float-start">CHATBOT</span></a>
         </ul>
       </div>
     </div>

@@ -6,7 +6,8 @@
 {% endblock %}
 
 {% block content %}
-<section class="detection pt-5">
+<header style="overflow-y: hidden;">
+<section class="detection ">
   <div class="container text-center pt-5">
     <div class="row justify-content-center pt-5">
       <form action="/detection" method="POST">
@@ -44,8 +45,9 @@
 
   <div class="row justify-content-center px-5">
     <p class="card-text text-center mt-3" style="color:white">{{ session["sample"] }}</p>
-    <h4 class="card-text text-center px-3" style="color:white">{{ session["anlys"] }}</h4>
+    <h4 class="card-text text-center px-3 mb-5" style="color:white;">{{ session["anlys"] }}</h4>
   </div>
 
 </section>
+</header>
 {% endblock %}
