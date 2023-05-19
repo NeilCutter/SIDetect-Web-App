@@ -9,22 +9,13 @@
     background-repeat: no-repeat;
     }
     @media screen and (max-width:427px) {
-      .card {
-        width: 350px;
-      margin-left: -90px;
-      }
       .banner{
         background-size: 100%;
       }
       
-    }
-    @media screen and (max-width:375px) {
-      .card {
-        width: 320px;
-      margin-left: -90px;
-
-      }
-      .banner{
-        background-size: 100%;
+      @media screen and (max-width:375px) {
+        .banner{
+          background-size: 100%;
+        }
       }
     }
