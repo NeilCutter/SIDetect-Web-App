@@ -2,6 +2,7 @@ from webapp import app, render_template, request, session
 from webapp import preprocess_text
 from webapp import gpt3
 from webapp import file_handling as flh
+from webapp import openai
 
 
 @app.route("/")
@@ -55,9 +56,26 @@ def chatbot_page():
     return render_template("chatbot.html")
 
 
-@app.route("/chatbot", methods=["POST"])
-def chatbot():
-    text_block = request.form["chat"]
-    prompt = flh.load_file("./prompts/prompt4.txt").replace("<<BLOCK>>", text_block) + "\n"
-    session["chat"] = gpt3.chat(prompt)
-    return render_template("chatbot.html", input=session["chat"])
+# @app.route("/chatbot", methods=["POST"])
+# def chatbot():
+#     text_block = request.form["chat"]
+#     prompt = flh.load_file("./prompts/prompt4.txt").replace("<<BLOCK>>", text_block) + "\n"
+#     session["chat"] = gpt3.chat(prompt)
+#     return render_template("chatbot.html", input=session["chat"])
+
+conversation=[{"role": "system", "content": "You are MIKAY that only answers questions related to depression, suicide, mental illness, and has a goal to help and give advices."}]
+
+@app.route("/get")
+def completion_response():
+    user_input = request.args.get('msg')   
+    conversation.append({"role": "user", "content": user_input})
+    response = openai.ChatCompletion.create(
+        model="gpt-3.5-turbo",
+        messages = conversation,
+        temperature=1,
+        max_tokens=1000,
+        top_p=0.9
+    )
+
+    conversation.append({"role": "assistant", "content": response['choices'][0]['message']['content']})
+    return str(response['choices'][0]['message']['content'])
