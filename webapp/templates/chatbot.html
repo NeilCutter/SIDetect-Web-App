@@ -30,10 +30,13 @@
 
         </div>
         <div class="chat-bar-input-block">
+            
             <div id="userInput">
+                
                 <input id="userMessage" class="form-control" type="text" name="msg"
                     placeholder="Tap 'Enter' to send a message">
             </div>
+            
             <div class="chat-bar-icons">
                 <i id="sendButton" style="color: white;" class="fa fa-fw fa-send" type="submit" value="Send"></i>
             </div>
@@ -52,6 +55,10 @@
             this.nextElementSibling.style.maxHeight = this.nextElementSibling.style.maxHeight ? null : this.nextElementSibling.scrollHeight + "px";
         });
     }
+
+    let firstMessage = "Hello! How can I assist you today?";
+    document.getElementById("messagebox").innerHTML = '<p class="assistantText"><span>' + firstMessage + '</span></p>';
+
     function getCompletion() {
         let userText = $("#userMessage").val();
         let userHtml = '<p class="userText"><span>' + userText + '</span></p>';
