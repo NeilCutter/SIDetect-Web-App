@@ -1,53 +1,61 @@
-{% extends 'index.html' %}
-
-{% block head %}
-<link rel="stylesheet" href="..\static\css\detection.css">
+{% extends 'index.html' %} {% block head %}
+<link rel="stylesheet" href="..\static\css\detection.css" />
 <title>SIDetect Detection</title>
-{% endblock %}
+{% endblock %} {% block content %}
+<header style="overflow-y: hidden">
+  <section class="detection">
+    <div class="container text-center pt-5">
+      <div class="row justify-content-center pt-5">
+        <form action="/detection" method="POST">
+          <div class="form-group pt-5">
+            <div class="head">
+              <div class="svg"></div>
 
-{% block content %}
-<header style="overflow-y: hidden;">
-<section class="detection ">
-  <div class="container text-center pt-5">
-    <div class="row justify-content-center pt-5">
-      <form action="/detection" method="POST">
-        <div class="form-group pt-5">
-          <div class="head">
-            <div class="svg">
-            </div>
-
-            <div class="title pt-5">
-              <h1 class="text">
-                SID
-              </h1>
-              <div class="brand">
-                <h1>
-                  <span>e</span>
-                  <span>t</span>
-                  <span>e</span>
-                  <span>c</span>
-                  <span>t</span>
-                </h1>
+              <div class="title pt-5">
+                <h1 class="text">SID</h1>
+                <div class="brand">
+                  <h1>
+                    <span>e</span>
+                    <span>t</span>
+                    <span>e</span>
+                    <span>c</span>
+                    <span>t</span>
+                  </h1>
+                </div>
               </div>
             </div>
+            <p class="text-white text-center">
+              Enter a sentence or phrase to detect if it contains suicidal
+              ideation or not.
+            </p>
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Input to Detect" name="text" />
+              <button type="submit" name="text" class="btn">Detect</button>
+            </div>
           </div>
-          <p class="text-white text-center"> Enter a sentence or phrase to detect if it contains suicidal ideation or
-            not.</p>
-          <div class="input-group">
-            <input type="text" class="form-control" placeholder="Input to Detect" name="text">
-            <button type="submit" name="text" class="btn">Detect</button>
-          </div>
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
 
-  </div>
+    <div class="row justify-content-center px-5">
 
-  <div class="row justify-content-center px-5">
-    <p class="card-text text-center mt-3" style="color:white">{{ session["sample"] }}</p>
-    <h4 class="card-text text-center px-3 mb-5" style="color:white;">{{ session["anlys"] }}</h4>
-  </div>
+      {% if int_text == 0 %}
+      <h3 class="card-text text-center px-3 mt-3" style="color: rgb(233, 13, 13)">
+        {{ output }}
+      </h3>
+      <br>
+      <img src="..\static\img\cute_cat.gif" class="img-fluid mt-3 mb-5" style="height: 350px; width: 500px;" alt="" />
 
-</section>
+      {% else %}
+      <p class="card-text text-center mt-3" style="color: white">
+        {{ session["sample"] }}
+      </p>
+      <h4 class="card-text text-center px-3 mb-5" style="color: white">
+        {{ session["anlys"] }}
+      </h4>
+      {% endif %}
+
+    </div>
+  </section>
 </header>
 {% endblock %}
